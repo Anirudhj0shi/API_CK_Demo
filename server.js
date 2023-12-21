@@ -69,5 +69,9 @@ app.put("/:id", async (req, res) => {
   res.json({ contact });
 });
 
+app.get('/',(req,res)=>{
+  res.json({"message":"This is home route"});
+})
+
 const port = 3000;
 app.listen(port, () => console.log(`server is running on port ${port}`));
