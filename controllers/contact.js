@@ -5,7 +5,12 @@ export const addContact = async (req, res) => {
   // console.log("addcontact is working");
   // console.log(req.body)
 
-  const { name, gmail, phone, ctype } = req.body;
+//   const { name, gmail, phone, ctype } = req.body;
+
+const name = req.body.name;
+const gmail = req.body.gmail;
+const phone = req.body.phone;
+const ctype = req.body.ctype;
 
   let contact = await Contact.findOne({ gmail });
   let phoneNumber = await Contact.findOne({ phone });
